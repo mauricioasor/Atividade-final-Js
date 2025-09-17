@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+
+  <script src="https://kit.fontawesome.com/65f22fe718.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="./css/styleatividades.css">
+
+  <title>Road to Dev | Estrutura Switch Case</title>
+
+</head>
+
+<body>
+
+  <header id="inicio" class="main-header">
+    <nav class="nav-menu">
+      <a class="menu-link" href="index.html"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
+    </nav>
+  </header>
+  <main class="container">
+    <section id="titulo-if" class="card">
+      <h1>Arrays: <span>Vetor Unidimensional</span></h1>
+      <p style="text-align: center; max-width: 800px; margin: 15px auto 0;">
+        Uma lista de elementos do mesmo tipo, acessados por um índice. Útil para organizar nomes, números ou produtos de forma
+        linear.
+
+      </p>
+      <div id="btn-atividades" class="activity-buttons">
+        <a href="#codigo-exemplo1">Atividade 1 </a>
+        <a href="#codigo-exemplo2">Atividade 2 </a>
+        <a href="#codigo-exemplo3">Atividade 3 </a>
+        <a href="#codigo-exemplo4">Atividade 4 </a>
+      </div>
+    </section>
+
+    <section id="codigo-exemplo1" class="card code-container">
+      <h3>Código da Atividade 1</h3>
+      <p>Este programa lê as notas de três alunos e, em seguida, exibe um relatório com as notas que são iguais ou
+        superiores a
+        7,5, indicando quais alunos obtiveram essas notas.</p>
+      <br>
+      <form name="codeForm1">
+        <textarea name="fonte" cols="70" rows="25">
+          <!DOCTYPE html>
+          <html lang="pt-BR">
+          
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Estrutura Array</title>
+            <style>
+              /*Configurações gerais */
+          
+              section {
+          
+                margin-top: 0px auto;
+          
+              }
+          
+              .cadinteiro {
+                width: 300px;
+                margin: 0px auto;
+                font-weight: bold;
+                margin-bottom: 10px;
+          
+              }
+          
+              .cadinteiro input {
+                margin: 5px auto;
+                width: 100%;
+                padding: 5px 0;
+              }
+          
+              .cadinteiro button {
+                width: 30%;
+                margin: 0 10%;
+                background-color: #b1ccf5;
+                font-weight: bold;
+                font-size: 16px;
+          
+              }
+          
+              label {
+                float: left;
+              }
+          
+              h2 {
+                text-align: center;
+                margin-top: 0px;
+                margin-bottom: 10px;
+                font-size: 28px;
+              }
+            </style>
+          </head>
+          
+          <body>
+            <section>
+              <h2>Atividade 1- Ler notas. (array)</h2>
+              <font face=" arial">
+                <form name="formnumint" action="#" method="get" onsubmit="return validaProc()">
+                  <fieldset class="cadinteiro">
+                    <legend>Entrada de Dados</legend><br>
+                    <button type="submit1">Enviar</button>
+                    <button type="button" onclick="window.location='arrays.html'">Voltar</button>
+                  </fieldset>
+                </form>
+              </font>
+            </section>
+            <script>
+              function validaProc() {
+                //declarando variavel contadora
+                let i;
+                //declarando vetor
+                let notas = [];
+                let qtdNotas = [];
+                //alimentando o vetor com dados
+
+                for (i = 0; i < 3; i++) {
+
+                  notas[i] = parseFloat(prompt("Digite a " + (i + 1) + "º nota"));
+                  console.log("A nota informada na posição " + i + " é " + notas[i]);
+                }
+
+                for (i = 0; i < 3; i++) {
+
+                  if (notas[i] >= 7.5) {
+
+                    qtdNotas[i] = notas[i]
+                  }
+                }
+
+                console.log("Relatório de notas igual ou acima de 7.5: ");
+
+                for (i = 0; i < 3; i++) {
+
+                  console.log(qtdNotas[i]);
+                }
+                return false;
+
+              }
+
+            </script>
+          </body>
+          
+          </html>
+        </textarea>
+
+        <div class="execute-button-container">
+          <input type="button" value="Executar Código"
+            onclick="const newWindow = window.open(); newWindow.document.write(document.codeForm1.fonte.value); newWindow.document.close();" />
+        </div>
+      </form>
+    </section>
+    <section id="codigo-exemplo2" class="card code-container">
+      <h3>Código da Atividade 2</h3>
+      <p>Este programa lê as notas de um conjunto de alunos e, em seguida, exibe um relatório com as notas que são
+        iguais ou
+        superiores a 7,5, indicando quais alunos obtiveram essas notas. Ao final, o programa informa a quantidade total
+        de notas
+        iguais ou superiores a 7,5.</p>
+      <br>
+      <form name="codeForm2">
+        <textarea name="fonte" cols="70" rows="25">
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estrutura Array</title>
+  <style>
+    /*Configurações gerais */
+
+    section {
+
+      margin-top: 0px auto;
+
+    }
+
+    .cadinteiro {
+      width: 300px;
+      margin: 0px auto;
+      font-weight: bold;
+      margin-bottom: 10px;
+
+    }
+
+    .cadinteiro input {
+      margin: 5px auto;
+      width: 100%;
+      padding: 5px 0;
+    }
+
+    .cadinteiro button {
+      width: 30%;
+      margin: 0 10%;
+      background-color: #b1ccf5;
+      font-weight: bold;
+      font-size: 16px;
+
+    }
+
+    label {
+      float: left;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 0px;
+      margin-bottom: 10px;
+      font-size: 28px;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <h2>Atividade 2 - Ler notas. (array)</h2>
+    <font face=" arial">
+      <form name="formnumint" action="#" method="get" onsubmit="return validaProc()">
+        <fieldset class="cadinteiro">
+          <legend>Entrada de Dados</legend><br>
+          <button type="submit1">Enviar</button>
+          <button type="button" onclick="window.location='arrays.html'">Voltar</button>
+        </fieldset>
+      </form>
+    </font>
+  </section>
+  <script>
+    function validaProc() {
+      //declarando variavel contadora
+      let i;
+      //declarando vetor
+      let notas = [];
+      let qtdNotas = [];
+      totalNotas = 0;
+      //alimentando o vetor com dados
+
+      for (i = 0; i < 3; i++) {
+
+        notas[i] = parseFloat(prompt("Digite a " + (i + 1) + "º nota"));
+        console.log("A nota informada na posição " + i + " é " + notas[i]);
+      }
+
+      for (i = 0; i < 3; i++) {
+
+        if (notas[i] >= 7.5) {
+
+          qtdNotas[i] = notas[i]
+          totalNotas++
+        }
+      }
+
+      console.log("Relatório de notas igual ou acima de 7.5: ");
+
+      for (i = 0; i < 3; i++) {
+
+        console.log(qtdNotas[i]);
+      }
+
+      console.log("Quantidade de notas igual ou acima de 7.5: " + totalNotas);
+      return false;
+
+    }
+
+  </script>
+</body>
+
+</html>
+            </textarea>
+
+        <div class="execute-button-container">
+          <input type="button" value="Executar Código"
+            onclick="const newWindow = window.open(); newWindow.document.write(document.codeForm2.fonte.value); newWindow.document.close();" />
+        </div>
+      </form>
+    </section>
+    <section id="codigo-exemplo3" class="card code-container">
+      <h3>Código da Atividade 3</h3>
+      <p>Este programa cria um vetor com 10 posições, onde cada elemento é preenchido com o número correspondente à sua
+        posição
+        no vetor. Ao final, o programa exibe todos os valores armazenados no vetor.
+      </p>
+      <br>
+      <form name="codeForm3">
+        <textarea name="fonte" cols="70" rows="25">
+          <!DOCTYPE html>
+          <html lang="pt-BR">
+          
+          <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Estrutura Array</title>
+            <style>
+              /*Configurações gerais */
+          
+              section {
+          
+                margin-top: 0px auto;
+          
+              }
+          
+              .cadinteiro {
+                width: 300px;
+                margin: 0px auto;
+                font-weight: bold;
+                margin-bottom: 10px;
+          
+              }
+          
+              .cadinteiro input {
+                margin: 5px auto;
+                width: 100%;
+                padding: 5px 0;
+              }
+          
+              .cadinteiro button {
+                width: 30%;
+                margin: 0 10%;
+                background-color: #b1ccf5;
+                font-weight: bold;
+                font-size: 16px;
+          
+              }
+          
+              label {
+                float: left;
+              }
+          
+              h2 {
+                text-align: center;
+                margin-top: 0px;
+                margin-bottom: 10px;
+                font-size: 28px;
+              }
+            </style>
+          </head>
+          
+          <body>
+            <section>
+              <h2>Atividade 3- Alimentando um vetor. (array)</h2>
+              <font face=" arial">
+                <form name="formnumint" action="#" method="get" onsubmit="return validaProc()">
+                  <fieldset class="cadinteiro">
+                    <legend>Entrada de Dados</legend>
+                    <br />
+                    <button type="submit1">Enviar</button>
+                    <button type="button" onclick="window.location='arrays.html'">Voltar</button>
+                  </fieldset>
+                </form>
+              </font>
+            </section>
+            <script>
+              function validaProc() {
+                //declarando variavel contadora
+                let i
+                //declarando vetor
+                let num = []
+                let numQd = []
+                //alimentando o vetor com dados
+
+                for (i = 0; i < 10; i++) {
+                  num[i] = parseInt(prompt("Digite o " + (i + 1) + "º número"))
+                  console.log("A número informada na posição " + i + " é " + num[i])
+                  numQd[i] = num[i] * num[i]
+                }
+
+                console.log("Resultados")
+                for (i = 0; i < 10; i++) {
+                  console.log("O valor " + num[i] + " * " + num[i] + " é igual: " + numQd[i])
+                }
+                return false
+              }
+
+            </script>
+          </body>
+          
+          </html>
+
+        </textarea>
+
+        <div class="execute-button-container">
+          <input type="button" value="Executar Código"
+            onclick="const newWindow = window.open(); newWindow.document.write(document.codeForm3.fonte.value); newWindow.document.close();" />
+        </div>
+      </form>
+    </section>
+    <section id="codigo-exemplo4" class="card code-container">
+      <h3>Código da Atividade 4<h3>
+      <p>Este programa lê 10 números reais fornecidos pelo usuário e os armazena em um vetor. Em seguida, exibe apenas os números
+      que estão localizados em posições ímpares do vetor.</p>
+      <br>
+      <form name="codeForm4">
+        <textarea name="fonte" cols="70" rows="25">
+          <!DOCTYPE html>
+          <html lang="pt-BR">
+          
+          <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Estrutura Array</title>
+            <style>
+              /*Configurações gerais */
+          
+              section {
+          
+                margin-top: 0px auto;
+          
+              }
+          
+              .cadinteiro {
+                width: 300px;
+                margin: 0px auto;
+                font-weight: bold;
+                margin-bottom: 10px;
+          
+              }
+          
+              .cadinteiro input {
+                margin: 5px auto;
+                width: 100%;
+                padding: 5px 0;
+              }
+          
+              .cadinteiro button {
+                width: 30%;
+                margin: 0 10%;
+                background-color: #b1ccf5;
+                font-weight: bold;
+                font-size: 16px;
+          
+              }
+          
+              label {
+                float: left;
+              }
+          
+              h2 {
+                text-align: center;
+                margin-top: 0px;
+                margin-bottom: 10px;
+                font-size: 28px;
+              }
+            </style>
+          
+          </head>
+          
+          <body>
+            <section>
+              <h2>Atividade 4 - Ler e mostrar números posição ímpar. (array)</h2>
+              <font face=" arial">
+                <form name="formnumint" action="#" method="get" onsubmit="return validaProc()">
+                  <fieldset class="cadinteiro">
+                    <legend>Entrada de Dados</legend>
+                    <br />
+                    <button type="submit1">Enviar</button>
+                    <button type="button" onclick="window.location='arrays.html'">Voltar</button>
+                  </fieldset>
+                </form>
+              </font>
+            </section>
+            <script>
+              function validaProc() {
+                //declarando variavel contadora
+                let i
+                //declarando vetor
+                let num = []
+
+                //alimentando o vetor com dados
+
+                for (i = 0; i < 10; i++) {
+
+                  num[i] = parseFloat(prompt("Digite o " + (i + 1) + "º número"))
+                  //console.log("A número informado posição " + i + " é " + num[i])
+                }
+
+                console.log("Números nas posições ímpares:")
+                for (i = 0; i < 10; i++) {
+
+                  if (i % 2 != 0) {
+                    console.log("\nPosição " + i + " contém o valor de " + num[i])
+                  }
+
+                }
+                return false
+              }
+              /*Alimentar um vetor com 10 numeros reais e depois exibir os numeros localizados
+              nas posições impares*/
+            </script>
+          </body>
+          
+          </html>
+
+        </textarea>
+
+        <div class="execute-button-container">
+          <input type="button" value="Executar Código"
+            onclick="const newWindow = window.open(); newWindow.document.write(document.codeForm4.fonte.value); newWindow.document.close();" />
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <footer id="contato" class="main-footer">
+    <p>&copy; 2025 Road to Dev - Desenvolvido por Maurício Rosa</p>
+  </footer>
+
+</body>
+
+</html>

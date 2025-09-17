@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+
+  <script src="https://kit.fontawesome.com/65f22fe718.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="./css/styleatividades.css">
+
+  <title>Road to Dev | Estrutura Switch Case</title>
+
+</head>
+
+<body>
+
+  <header id="inicio" class="main-header">
+    <nav class="nav-menu">
+      <a class="menu-link" href="index.html"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
+    </nav>
+  </header>
+  <main class="container">
+    <section id="titulo-if" class="card">
+      <h1>Estrutura: <span>Switch Case</span></h1>
+      <p style="text-align: center; max-width: 800px; margin: 15px auto 0;">
+        Usado quando existem várias opções para uma mesma variável. Organiza os casos de forma mais clara que múltiplos
+        if/elses.
+      </p>
+      <div id="btn-atividades" class="activity-buttons">
+        <a href="#codigo-exemplo1">Atividade 1</a>
+        <a href="#codigo-exemplo2">Atividade 2</a>
+      </div>
+    </section>
+
+    <section id="codigo-exemplo1" class="card code-container">
+      <h3>Código da atividade 1</h3>
+      <p>O código abaixo é um exemplo que classifica as idades das pelo usúario, classificando como criança,
+        adolescente,
+        adulto ou idoso, utilizando a estrutura switch case.</p>
+      <br>
+      <form name="codeForm1">
+        <textarea name="fonte" cols="70" rows="25">
+          <!DOCTYPE html>
+          <html lang="pt-br">
+          
+          <head>
+            <meta charset="UTF-8">
+            <title>Extrutura Switch Case</title>
+            <link rel="stylesheet" type="text/css" href="css/config.css">
+            <script src="js/valproc.js"></script>
+            <style>
+              /*configuraçoes gerais*/
+          
+          
+          
+              section {
+                margin-top: 0px auto;
+          
+              }
+          
+              /*Configuração do formulario*/
+          
+              .cadnumint {
+                width: 300px;
+                margin: 0px auto;
+                font-weight: bold;
+                margin-bottom: 10px;
+              }
+          
+              .cadnumint input {
+          
+          
+                margin: 5px auto;
+                width: 100%;
+                padding: 5px 0;
+              }
+          
+              .cadnumint button {
+                width: 30%;
+                margin: 0 10%;
+                background-color: #b1ccf5;
+                font-weight: bold;
+                font-size: 16px;
+          
+              }
+          
+              label {
+          
+          
+                float: left
+              }
+          
+              h2 {
+                text-align: center;
+                margin-top: 0px;
+                margin-bottom: 10px;
+                font-size: 28px;
+              }
+            </style>
+          </head>
+          
+          <body>
+            <section>
+              <h2>Atividade - 1 Classificação por Idade (switch case)</h2>
+              <font face="arial">
+                <form name="frmnumint" action="#" method="get" onsubmit="return procFormulario()">
+                  <fieldset class="cadnumint">
+                    <legend>Entrada de dados</legend>
+                    <br>
+                    <label for="numint">Informe sua idade:</label>
+                    <input type="text" name="txtnumint" id="numint"><br><br>
+                    <button type="reset">Limpar</button>
+                    <button type="submit">Enviar</button>
+                    <button type="button" onclick="window.location='switchcase.html'">Voltar</button>
+
+                  </fieldset>
+                </form>
+              </font>
+            </section>
+            <script>
+              function procFormulario() {
+                if (document.frmnumint.txtnumint.value == "") {
+                  alert("Preencha o campo número inteiro");
+                  document.frmnumint.focus();
+                  return false;
+                } else {
+
+                  let numint = parseInt(document.getElementById("numint").value);
+                  switch (true) {
+                    case (numint >= 0 && numint <= 3):
+                      console.log("Bebê");
+                      return false;
+                      break;
+
+                    case (numint >= 4 && numint <= 10):
+                      console.log("Criança");
+                      return false;
+                      break;
+
+                    case (numint >= 11 && numint <= 18):
+                      console.log("Adolescente");
+                      return false;
+                      break;
+
+                    default:
+                      console.log("Adulto");
+                      return false;
+                      break;
+                  }
+                }
+              }
+            </script>
+          </body>
+        </textarea>
+
+        <div class="execute-button-container">
+          <input type="button" value="Executar Código"
+            onclick="const newWindow = window.open(); newWindow.document.write(document.codeForm1.fonte.value); newWindow.document.close();" />
+        </div>
+      </form>
+    </section>
+    <section id="codigo-exemplo2" class="card code-container">
+      <h3>Código da atividade 2</h3>
+      <p>Neste código criamos uma calculadora simples, com entrada de dados utilizando o switchcase</p>
+      <br>
+      <form name="codeForm">
+        <textarea name="fonte" cols="70" rows="25">
+             <!DOCTYPE html>
+            <html lang="pt-BR">
+            
+            <head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>Calculadora Simples</title>
+              <link rel="stylesheet" href="css/config.css">
+              <style>
+                /*configuraçoes gerais*/
+            
+            
+            
+                section {
+                  margin-top: 0px auto;
+            
+                }
+            
+                /*Configuração do formulario*/
+            
+                .calculadora {
+                  width: 300px;
+                  margin: 0px auto;
+                  font-weight: bold;
+                  margin-bottom: 10px;
+                }
+            
+                .calculadora input {
+            
+            
+                  margin: 5px auto;
+                  width: 100%;
+                  padding: 5px 0;
+                }
+            
+                .calculadora button {
+                  width: 30%;
+                  margin: 0 10%;
+                  background-color: #b1ccf5;
+                  font-weight: bold;
+                  font-size: 16px;
+            
+                }
+            
+                label {
+            
+            
+                  float: left
+                }
+            
+                h2 {
+                  text-align: center;
+                  margin-top: 0px;
+                  margin-bottom: 10px;
+                  font-size: 28px;
+                }
+              </style>
+            </head>
+            
+            <body>
+              <div class="calculadora">
+                <h1>Atividade - 2 Calculadora com Estrutura (switch case)</h1>
+            
+                <label for="num1">Digite o primeiro número:</label>
+                <input type="number" id="num1" required>
+            
+                <label for="num2">Digite o segundo número:</label>
+                <input type="number" id="num2" required>
+            
+                <label for="operacao">Escolha a operação matemática:</label>
+                <select id="operacao">
+                  <option value="soma">Soma (+)</option>
+                  <option value="subtracao">Subtração (-)</option>
+                  <option value="multiplicacao">Multiplicação (*)</option>
+                  <option value="divisao">Divisão (/)</option>
+                </select>
+            
+                <button onclick="calculadora()">Calcular</button>
+                        <button type="button" onclick="window.location='switchcase.html'">Voltar</button>
+            
+                <div id="result-area"></div>
+              </div>
+              <script>
+                function calculadora() {
+
+                  const num1 = parseFloat(document.getElementById('num1').value);
+                  const num2 = parseFloat(document.getElementById('num2').value);
+                  const operation = document.getElementById('operacao').value;
+                  const resultArea = document.getElementById('result-area');
+                  resultArea.innerHTML = '';
+                  if (isNaN(num1) || isNaN(num2)) {
+                    resultArea.innerHTML = '<p style="color: red;">Por favor, insira números válidos.</p>';
+                    return;
+                  }
+                  let result;
+                  let operationText = '';
+                  switch (operation) {
+                    case 'soma':
+                      result = num1 + num2;
+                      operationText = 'Soma';
+                      break;
+                    case 'subtracao':
+                      result = num1 - num2;
+                      operationText = 'Subtração';
+                      break;
+                    case 'multiplicacao':
+                      result = num1 * num2;
+                      operationText = 'Multiplicação';
+                      break;
+                    case 'divisao':
+
+                      if (num2 === 0) {
+                        resultArea.innerHTML = '<p style="color: red;">Não é possível dividir por zero.</p>';
+                        return;
+                      }
+                      result = num1 / num2;
+                      operationText = 'Divisão';
+                      break;
+                    default:
+                      resultArea.innerHTML = '<p style="color: red;">Operação inválida.</p>';
+                      return;
+                  }
+                  const parity = (result % 2 === 0) ? 'Par' : 'Ímpar';
+                  resultArea.innerHTML += `<p><strong>Operação escolhida:</strong> ${operationText}</p>`;
+                  resultArea.innerHTML += `<p><strong>Números digitados:</strong> ${num1} e ${num2}</p>`;
+                  resultArea.innerHTML += `<p><strong>Resultado:</strong> ${result}</p>`;
+                  resultArea.innerHTML += `<p><strong>O resultado é:</strong> ${parity}</p>`;
+                }
+              </script>
+            
+            </body>
+            
+            </html>
+
+            </textarea>
+
+        <div class="execute-button-container">
+          <input type="button" value="Executar Código"
+            onclick="const newWindow = window.open(); newWindow.document.write(document.codeForm.fonte.value); newWindow.document.close();" />
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer id="contato" class="main-footer">
+    <p>&copy; 2025 Road to Dev - Desenvolvido por Maurício Rosa</p>
+  </footer>
+
+</body>
+
+</html>

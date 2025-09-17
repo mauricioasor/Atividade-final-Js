@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cor-principal: rgb(51, 139, 124);
+  --cor-fundo: #085852;
+  --cor-card: #252525;
+  --cor-texto: #f0f0f0;
+  --cor-branco: #ffffff;
+  --cor-preto: #000000;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.6;
+}
+
+.main-header {
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px solid var(--cor-principal);
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.menu-link {
+  color: var(--cor-branco);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu-link:hover {
+  background-color: var(--cor-principal);
+  color: var(--cor-branco);
+}
+
+.card,
+.card-estudo {
+  background-color: var(--cor-card);
+  border-radius: 10px;
+  padding: 30px;
+  margin: 40px;
+  border-left: 5px solid var(--cor-principal);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.estudos-links a {
+  text-decoration: none;
+  color: var(--cor-branco);
+  background-color: var(--cor-principal);
+  font-weight: bold;
+  margin-top: 10px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.estudos-links a:hover {
+  background-color: #5d2a72;  /* Um roxo um pouco mais escuro */
+}
+
+h1,
+h2,
+h3 {
+  color: var(--cor-branco);
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 2.5em;
+  text-align: center;
+}
+
+span {
+  color: var(--cor-principal);
+}
+
+p {
+  font-size: 18px;
+  color: #c7c7c7;
+}
+
+p+p {
+  margin-top: 15px;
+}
+
+.main-footer {
+  text-align: center;
+  padding: 15px;
+  margin-top: 60px;
+  background-color: var(--cor-preto);
+  border-top: 1px solid var(--cor-principal);
+}

@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+
+  <script src="https://kit.fontawesome.com/65f22fe718.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="./css/styleatividades.css">
+
+  <title>Road to Dev | Estrutura Switch Case</title>
+
+</head>
+
+<body>
+
+  <header id="inicio" class="main-header">
+    <nav class="nav-menu">
+      <a class="menu-link" href="index.html"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
+    </nav>
+  </header>
+  <main class="container">
+    <section id="titulo-if" class="card">
+      <h1>Arrays: <span>Vetor Bidimensional (Matriz)</span></h1>
+      <p style="text-align: center; max-width: 800px; margin: 15px auto 0;">
+        Pode ser entendido como uma tabela com linhas e colunas. Ideal para organizar informações em formato de grade,
+        como um
+        tabuleiro de jogo.
+
+      </p>
+      <div id="btn-atividades" class="activity-buttons">
+        <a href="#codigo-exemplo1">Atividade 1 </a>
+        <a href="#codigo-exemplo2">Atividade 2 </a>
+        <a href="#codigo-exemplo3">Atividade 3 </a>
+        <a href="#codigo-exemplo4">Atividade 4 </a>
+      </div>
+    </section>
+
+    <section id="codigo-exemplo1" class="card code-container">
+      <h3>Código da Atividade 1</h3>
+      <p>Este programa lê uma matriz 3x3 de números inteiros fornecidos pelo usuário, em seguida solicita um valor para
+        multiplicação. O programa multiplica cada elemento da matriz por esse valor e exibe o conteúdo da matriz
+        resultante.</p>
+      <br>
+      <form name="codeForm1">
+        <textarea name="fonte" cols="70" rows="25">
+          <!DOCTYPE html>
+          <html lang="pt-BR">
+          
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Estrutura Matriz</title>
+            <style>
+              /*Configurações gerais */
+          
+              section {
+          
+                margin-top: 0px auto;
+          
+              }
+          
+              .cadinteiro {
+                width: 300px;
+                margin: 0px auto;
+                font-weight: bold;
+                margin-bottom: 10px;
+          
+              }
+          
+              .cadinteiro input {
+                margin: 5px auto;
+                width: 100%;
+                padding: 5px 0;
+              }
+          
+              .cadinteiro button {
+                width: 30%;
+                margin: 0 10%;
+                background-color: #b1ccf5;
+                font-weight: bold;
+                font-size: 16px;
+          
+              }
+          
+              label {
+                float: left;
+              }
+          
+              h2 {
+                text-align: center;
+                margin-top: 0px;
+                margin-bottom: 10px;
+                font-size: 28px;
+              }
+            </style>
+          </head>
+          
+          <body>
+            <section>
+              <h2>Atividade 1 - Alimente a Matriz 3x3. (Matriz)</h2>
+              <font face=" arial">
+                <form name="formnumint" action="#" method="get" onsubmit="return validaProc()">
+                  <fieldset class="cadinteiro">
+                    <legend>Entrada de Dados</legend><br>
+                    <button type="submit1">Enviar</button>
+                    <button type="button" onclick="window.location='arraysbidi.html'">Voltar</button>
+                  </fieldset>
+                </form>
+              </font>
+            </section>
+            <script>
+              function validaProc() {
+                let matriz = []
+                let matrizMulti = []
+                let linhas = 3
+                let colunas = 3
+                let valor
+
+                //alimentando a matriz
+
+                for (i = 0; i < linhas; i++) {
+                  matriz[i] = []
+                  for (c = 0; c < colunas; c++) {
+                    matriz[i][c] = parseInt(
+                      prompt("Digite o valor da linha " + i + " e coluna " + c)
+                    )
+                  }
+                }
+                //imprimindo os valores originais
+                document.write("Matriz com seu valor original.\n");
+                document.write("<br>");
+                for (i = 0; i < linhas; i++) {
+                  for (c = 0; c < colunas; c++) {
+                    document.write(matriz[i][c] + "&nbsp&nbsp")
+                  }
+                  document.write("<br>")
+                }
+
+                valor = parseInt(prompt("Digite um valor para multiplicar: "));
+
+                for (i = 0; i < linhas; i++) {
+                  matrizMulti[i] = []
+                  for (c = 0; c < colunas; c++) {
+                    matrizMulti[i][c] = matriz[i][c] * valor
+                  }
+                }
+                //imprimindo os dados da matriz multiplicada
+                document.write("Matriz multiplicada por " + valor + "\n");
+                document.write("<br>")
+                for (i = 0; i < linhas; i++) {
+                  for (c = 0; c < colunas; c++) {
+                    document.write(matrizMulti[i][c] + "&nbsp&nbsp")
+                  }
+                  document.write("<br>")
+                }
+                return false
+              }
+
+              /*
+              Atividade 1
+              Alimentar uma matriz 3x3 de valores itneiros, multiplcando essa matriz por um valor informado pelo
+              usuario e escrevando o conteudo da matriz multiplicada
+              */
+            </script>
+          </body>
+          
+          </html>
+        </textarea>
+
+        <div class="execute-button-container">
+          <input type="button" value="Executar Código"
+            onclick="const newWindow = window.open(); newWindow.document.write(document.codeForm1.fonte.value); newWindow.document.close();" />
+        </div>
+      </form>
+    </section>
+    <section id="codigo-exemplo2" class="card code-container">
+      <h3>Código da Atividade 2</h3>
+      <p>EEste programa lê uma matriz 2x2 de números inteiros fornecidos pelo usuário. Em seguida, solicita ao usuário
+        que escolha
+        uma linha da matriz e calcula a soma dos elementos dessa linha, exibindo o resultado.</p>
+      <br>
+      <form name="codeForm2">
+        <textarea name="fonte" cols="70" rows="25">
+          <!DOCTYPE html>
+          <html lang="pt-BR">
+          
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Estrutura Matriz</title>
+            <style>
+              /*Configurações gerais */
+          
+              section {
+          
+                margin-top: 0px auto;
+          
+              }
+          
+              .cadinteiro {
+                width: 300px;
+                margin: 0px auto;
+                font-weight: bold;
+                margin-bottom: 10px;
+          
+              }
+          
+              .cadinteiro input {
+                margin: 5px auto;
+                width: 100%;
+                padding: 5px 0;
+              }
+          
+              .cadinteiro button {
+                width: 30%;
+                margin: 0 10%;
+                background-color: #b1ccf5;
+                font-weight: bold;
+                font-size: 16px;
+          
+              }
+          
+              label {
+                float: left;
+              }
+          
+              h2 {
+                text-align: center;
+                margin-top: 0px;
+                margin-bottom: 10px;
+                font-size: 28px;
+              }
+            </style>
+          </head>
+          
+          <body>
+            <section>
+              <h2>Atividade 2 - Alimente a Matriz 2x2. (Matriz)</h2>
+              <font face=" arial">
+                <form name="formnumint" action="#" method="get" onsubmit="return validaProc()">
+                  <fieldset class="cadinteiro">
+                    <legend>Entrada de Dados</legend><br>
+                    <button type="submit1">Enviar</button>
+                    <button type="button" onclick="window.location='arraysbidi.html'">Voltar</button>
+                  </fieldset>
+                </form>
+              </font>
+            </section>
+            <script>
+              function validaProc() {
+                let matriz = []
+                let somaLinha = 0
+                let linhas = 2
+                let colunas = 2
+                let valor
+
+                //alimentando a matriz
+
+                for (i = 0; i < linhas; i++) {
+                  matriz[i] = []
+                  for (c = 0; c < colunas; c++) {
+                    matriz[i][c] = parseInt(
+                      prompt("Digite o valor da linha " + i + " e coluna " + c)
+                    )
+                  }
+                }
+                //imprimindo os valores originais
+                document.write("Matriz com seu valor original.\n")
+                document.write("<br>")
+                for (i = 0; i < linhas; i++) {
+                  for (c = 0; c < colunas; c++) {
+                    document.write(matriz[i][c] + "&nbsp&nbsp")
+                  }
+                  document.write("<br>")
+                }
+                //solicita o valor da linha
+                valor = parseInt(
+                  prompt(
+                    "Escolha uma linha para mostrar a soma da mesma, digite apenas linha 0 ou linha 1: "
+                  )
+                )
+                //verifica se o valor é 0 ou 1
+                while (valor != 0 && valor != 1) {
+                  valor = parseInt(
+                    prompt(
+                      "Linha inválida! Escolha uma linha para mostrar a soma da mesma, digite apenas linha 0 ou linha 1: "
+                    )
+                  )
+                }
+
+                for (c = 0; c < colunas; c++) {
+                  somaLinha += matriz[valor][c]
+                }
+
+                //imprimindo os dados da linha somada
+                document.write("<br>A linha escolhida foi: " + valor + "<br>")
+                document.write("Os elementos da linha são: " + matriz[valor] + "<br>")
+                document.write("A soma da linha é: " + somaLinha)
+                return false
+              }
+
+              /*
+              Atividade 2
+              Construa um algoritimo para ler uma matriz 2x2 de inteiros
+              e imprimir a soma dos elementos de uma linha fornecida pelo usuário
+              */
+
+            </script>
+          </body>
+          
+          </html>
+        </textarea>
+
+        <div class="execute-button-container">
+          <input type="button" value="Executar Código"
+            onclick="const newWindow = window.open(); newWindow.document.write(document.codeForm2.fonte.value); newWindow.document.close();" />
+        </div>
+      </form>
+    </section>
+    <section id="codigo-exemplo3" class="card code-container">
+      <h3>Código da Atividade 3</h3>
+      <p>Este programa cria uma matriz 2x2 em que cada elemento é calculado como a soma dos índices de sua posição na
+        matriz. Em
+        seguida, exibe o conteúdo completo da matriz.
+      </p>
+      <br>
+      <form name="codeForm3">
+        <textarea name="fonte" cols="70" rows="25">
+          <!DOCTYPE html>
+          <html lang="pt-BR">
+          
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Estrutura Matriz</title>
+            <style>
+              /*Configurações gerais */
+          
+              section {
+          
+                margin-top: 0px auto;
+          
+              }
+          
+              .cadinteiro {
+                width: 300px;
+                margin: 0px auto;
+                font-weight: bold;
+                margin-bottom: 10px;
+          
+              }
+          
+              .cadinteiro input {
+                margin: 5px auto;
+                width: 100%;
+                padding: 5px 0;
+              }
+          
+              .cadinteiro button {
+                width: 30%;
+                margin: 0 10%;
+                background-color: #b1ccf5;
+                font-weight: bold;
+                font-size: 16px;
+          
+              }
+          
+              label {
+                float: left;
+              }
+          
+              h2 {
+                text-align: center;
+                margin-top: 0px;
+                margin-bottom: 10px;
+                font-size: 28px;
+              }
+            </style>
+          </head>
+          
+          <body>
+            <section>
+              <h2>Atividade 3 - Alimente a Matriz 2x2. (Matriz)</h2>
+              <font face=" arial">
+                <form name="formnumint" action="#" method="get" onsubmit="return validaProc()">
+                  <fieldset class="cadinteiro">
+                    <legend>Entrada de Dados</legend><br>
+                    <button type="submit1">Enviar</button>
+                        <button type="button" onclick="window.location='arraysbidi.html'">Voltar</button>
+                    
+                  </fieldset>
+                </form>
+              </font>
+            </section>
+            <script>
+              function validaProc() {
+                let matriz = []
+                let matrizSoma = []
+                let linhas = 2
+                let colunas = 2
+
+
+                //alimentando a matriz
+                for (i = 0; i < linhas; i++) {
+                  matriz[i] = []
+                  for (c = 0; c < colunas; c++) {
+                    matriz[i][c] = i + c // somente é preciso idicar que matriz recebe o indice somando com a coluna
+                  }
+                }
+
+                //imprimindo os dados da matriz somada
+                document.write("Matriz somada pelos indices:\n");
+                document.write("<br>")
+                for (i = 0; i < linhas; i++) {
+                  for (c = 0; c < colunas; c++) {
+                    document.write(matriz[i][c] + "&nbsp&nbsp")
+                  }
+                  document.write("<br>")
+                }
+                return false
+              }
+
+              /*
+              Atividade 3
+              Crie uma matriz 2x2 onde o valor de cada elemento dentro da matriz 
+              e a soma dos indices da posicão
+              */
+            </script>
+          </body>
+          
+          </html>
+        </textarea>
+
+        <div class="execute-button-container">
+          <input type="button" value="Executar Código"
+            onclick="const newWindow = window.open(); newWindow.document.write(document.codeForm3.fonte.value); newWindow.document.close();" />
+        </div>
+      </form>
+    </section>
+    <section id="codigo-exemplo4" class="card code-container">
+      <h3>Código da Atividade 4<h3>
+          <p>Este programa cria uma matriz 2x3, solicita ao usuário que informe os valores de cada elemento, armazena
+            esses valores
+            na matriz e, em seguida, exibe todo o conteúdo da matriz.</p>
+          <br>
+          <form name="codeForm4">
+            <textarea name="fonte" cols="70" rows="25">
+              <!DOCTYPE html>
+              <html lang="pt-BR">
+              
+              <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Estrutura  Matriz</title>
+                <style>
+                  /*Configurações gerais */
+              
+                  section {
+              
+                    margin-top: 0px auto;
+              
+                  }
+              
+                  .cadinteiro {
+                    width: 300px;
+                    margin: 0px auto;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+              
+                  }
+              
+                  .cadinteiro input {
+                    margin: 5px auto;
+                    width: 100%;
+                    padding: 5px 0;
+                  }
+              
+                  .cadinteiro button {
+                    width: 30%;
+                    margin: 0 10%;
+                    background-color: #b1ccf5;
+                    font-weight: bold;
+                    font-size: 16px;
+              
+                  }
+              
+                  label {
+                    float: left;
+                  }
+              
+                  h2 {
+                    text-align: center;
+                    margin-top: 0px;
+                    margin-bottom: 10px;
+                    font-size: 28px;
+                  }
+                </style>
+              </head>
+              
+              <body>
+                <section>
+                  <h2>Atividade 4 - Alimente a Matriz 2x3. (Matriz)</h2>
+                  <font face=" arial">
+                    <form name="formnumint" action="#" method="get" onsubmit="return validaProc()">
+                      <fieldset class="cadinteiro">
+                        <legend>Entrada de Dados</legend><br>
+                        <button type="submit1">Enviar</button>
+                        <button type="button" onclick="window.location='arraysbidi.html'">Voltar</button>
+                      </fieldset>
+                    </form>
+                  </font>
+                </section>
+                <script>
+                  function validaProc() {
+                    let matriz = []
+                    let matrizSoma = []
+                    let linhas = 2
+                    let colunas = 3
+
+
+                    //alimentando a matriz
+                    for (i = 0; i < linhas; i++) {
+                      matriz[i] = []
+                      for (c = 0; c < colunas; c++) {
+                        matriz[i][c] = parseInt(prompt("Entre com um valor: "))
+                      }
+                    }
+
+                    //imprimindo os dados da matriz somada
+                    document.write("Matriz somada pelos indices:\n");
+                    document.write("<br>")
+                    for (i = 0; i < linhas; i++) {
+                      for (c = 0; c < colunas; c++) {
+                        document.write(matriz[i][c] + "&nbsp&nbsp")
+                      }
+                      document.write("<br>")
+                    }
+                    return false
+                  }
+
+                  /*
+                  Atividade 4
+                  Criar, alimentar e imprimir os dados de uma matriz 2 x 3
+                  */
+                </script>
+              </body>
+              
+              </html>
+            </textarea>
+
+            <div class="execute-button-container">
+              <input type="button" value="Executar Código"
+                onclick="const newWindow = window.open(); newWindow.document.write(document.codeForm4.fonte.value); newWindow.document.close();" />
+            </div>
+          </form>
+    </section>
+
+  </main>
+
+  <footer id="contato" class="main-footer">
+    <p>&copy; 2025 Road to Dev - Desenvolvido por Maurício Rosa</p>
+  </footer>
+
+</body>
+
+</html>

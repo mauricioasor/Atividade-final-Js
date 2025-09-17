@@ -1,0 +1,242 @@
+:root {
+  --cor-principal: rgb(51, 139, 124);
+    --cor-fundo: #085852;
+    --cor-card: #252525;
+    --cor-texto: #f0f0f0;
+    --cor-branco: #ffffff;
+    --cor-preto: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.main-header {
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px solid var(--cor-principal);
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.menu-link {
+  color: var(--cor-branco);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu-link:hover {
+  background-color: var(--cor-principal);
+  color: var(--cor-branco);
+}
+
+
+.card {
+  background-color: var(--cor-card);
+  border-radius: 10px;
+  padding: 30px;
+  margin-top: 40px;
+  border-left: 5px solid var(--cor-principal);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--cor-branco);
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 2.5em;
+  text-align: center;
+}
+
+span {
+  color:  var(--cor-texto)
+}
+
+p {
+  font-size: 18px;
+  color: #c7c7c7;
+}
+
+
+.activity-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.activity-buttons1 {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.activity-buttons1 a {
+  text-decoration: none;
+  color: var(--cor-branco);
+  background-color: var(--cor-principal);
+  font-weight: bold;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-size: 16px;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.activity-buttons1 a:hover {
+  background-color: #5d2a72;
+  transform: translateY(-3px);
+}
+.activity-buttons a {
+  text-decoration: none;
+  color: var(--cor-branco);
+  background-color: var(--cor-principal);
+  font-weight: bold;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-size: 16px;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.activity-buttons a:hover {
+  background-color: #5d2a72;
+  transform: translateY(-3px);
+}
+
+
+.code-container h3 {
+  font-size: 1.8em;
+  border-bottom: 2px solid var(--cor-principal);
+  padding-bottom: 10px;
+}
+
+.code-container textarea {
+  width: 100%;
+  background-color: var(--cor-code-fundo);
+  color: var(--cor-texto);
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 20px;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 16px;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.execute-button-container {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.execute-button-container input[type="button"] {
+  background-color: var(--cor-principal);
+  color: var(--cor-branco);
+  border: none;
+  padding: 12px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.execute-button-container input[type="button"]:hover {
+  background-color: #5d2a72;
+}
+
+.main-footer {
+  text-align: center;
+  padding: 15px;
+  margin-top: 60px;
+  background-color: var(--cor-preto);
+  border-top: 1px solid var(--cor-principal);
+}
+
+.main-footer p {
+  font-size: 16px;
+}
+
+.social-links {
+  margin-top: 15px;
+}
+
+.social-links a {
+  color: var(--cor-texto);
+  font-size: 24px;
+  margin: 0 15px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--cor-principal);
+  transform: scale(1.2);
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  background-color: #000;
+  text-decoration: none;
+}
+
+.btn::after {
+  content: "↑";
+  font-size: 32px;
+  font-weight: bold;
+  color: aliceblue;
+  transition: margin-top 250ms;
+}
+
+.btn:hover::after {
+  margin-top: -8px;
+}
+

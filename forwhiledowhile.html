@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+
+  <script src="https://kit.fontawesome.com/65f22fe718.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="./css/styleatividades.css">
+
+  <title>Road to Dev | Estrutura Switch Case</title>
+
+</head>
+
+<body>
+
+  <header id="inicio" class="main-header">
+    <nav class="nav-menu">
+      <a class="menu-link" href="index.html"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
+    </nav>
+  </header>
+  
+
+  <main class="container">
+    <section id="titulo-if" class="card">
+      <h1>Estrutura: <span>For, While, Do While</span></h1>
+      <p style="text-align: center; max-width: 800px; margin: 15px auto 0;">
+        Usada para repetir um bloco de código um número conhecido de vezes. Ideal quando se sabe exatamente quantas
+        iterações
+        serão feitas.
+      </p>
+      <div id="btn-atividades" class="activity-buttons1">
+        <a href="#codigo-exemplo1">Atividade 1 - (<span>For</span>)</a>
+        <a href="#codigo-exemplo2">Atividade 2 - (<span>For</span>)</a>
+        <a href="#codigo-exemplo3">Atividade 3 - (<span>While</span>)</a>
+        <a href="#codigo-exemplo4">Atividade 4 - (<span>While</span>)</a>
+        <a href="#codigo-exemplo5">Atividade 5 - (<span>While</span>)</a>
+        <a href="#codigo-exemplo6">Atividade 6 - (<span>Do While</span>)</a>
+        <a href="#codigo-exemplo7">Atividade 7 - (<span>Do While</span>)</a>
+        <a href="#codigo-exemplo8">Atividade 8 - (<span>Do While</span>)</a>
+      </div>
+    </section>
+
+    <section id="codigo-exemplo1" class="card code-container">
+      <h3>Código da Atividade 1 - (<span>For</span>)</h3>
+      <p>Neste exemplo executa um loop que se repete 11 vezes, imprimindo no console a mensagem "Passou a Xª vez e
+        número é o : X"
+        para cada
+        iteração, onde X é o número da vez atual. Após o loop, a função sempre retorna false, independentemente do que
+        aconteceu
+        durante as iterações do loop.</p>
+      <br>
+      <form name="codeForm1">
+        <textarea name="fonte" cols="70" rows="25">
+          <!DOCTYPE html>
+          <html lang="pt-br">
+          
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Estrutura Repetição para......faça()</title>
+            <link rel="stylesheet" type="text.css" href="css/config.css">
+            <style>
+              /*configuração gerais*/
+          
+              section {
+          
+                margin-top: 0px auto;
+              }
+          
+              /*Configuração da pagina*/
+          
+              .cadinteiro {
+          
+                width: 300px;
+                margin: 0px auto;
+                font-weight: bold;
+                margin-bottom: 10px;
+              }
+          
+              .cadinteiro input {
+          
+                margin: 5px auto;
+                width: 100%;
+                padding: 5px 0;
+              }
+          
+              .cadinteiro button {
+                width: 30%;
+                margin: 0 10%;
+                background-color: #b1ccf5;
+                font-weight: bold;
+                font-size: 16px;
+              }
+          
+              label {
+                float: left;
+          
+              }
+          
+              h2 {
+                text-align: center;
+                margin-top: 0px;
+                margin-bottom: 10px;
+                font-size: 28px;
+              }
+            </style>
+          
+          
+          
+          
+          </head>
+          
+          <body>
+            <section>
+          
+              <h2>Atividade 1 - Exibir número inteiros - estrutura "para..."(for())</h2>
+              <font face="Arial">
+          
+                <form name="frmnumint" action="#" method="get" onsubmit="return validaProc()">
+          
+                  <fieldset class="cadinteiro">
+          
+                    <legend>Entrada de dados</legend>
+                    <br>
+          
+                    <button type="submit">Enviar</button>
+          
+          
+                  </fieldset>
+                </form>
+              </font>
+            </section>
+          </body>
+          <script>
+            function validaProc() {
+
+              for (let i = 1; i <= 11; i++) {
+
+                console.log("Passou a " + i + "ª vez e número é o : " + i);
+              }
+              return false;
+            }
+          </script>
+          
+          </html>
+        </textarea>
+
+        <div class="execute-button-container">
+          <input type="button" value="Executar Código"
+            onclick="const newWindow = window.open(); newWindow.document.write(document.codeForm1.fonte.value); newWindow.document.close();" />
+        </div>
+      </form>
+    </section>
+    <section id="codigo-exemplo2" class="card code-container">
+      <h3>Código da Atividade 2 - (<span>For</span>)</h3>
+      <p>Neste código criamos um programa para exibir a tabuada de um número dado pelo usuário.</p>
+      <br>
+      <form name="codeForm2">
+        <textarea name="fonte" cols="70" rows="25">
+                            <!DOCTYPE html>
+                            <html lang="pt-BR">
+                            
+                            <head>
+                              <meta charset="UTF-8">
+                              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                              <title>Estrutura Repetição para faca</title>
+                              <link rel="stylesheet" type="text/css" href="./css/config.css">
+                              <style>
+                                /*Configurações gerais */
+                            
+                                section {
+                            
+                                  margin-top: 0px auto;
+                            
+                                }
+                            
+                                .cadinteiro {
+                                  width: 300px;
+                                  margin: 0px auto;
+                                  font-weight: bold;
+                                  margin-bottom: 10px;
+                            
+                                }
+                            
+                                .cadinteiro input {
+                                  margin: 5px auto;
+                                  width: 100%;
+                                  padding: 5px 0;
+                                }
+                            
+                                .cadinteiro button {
+                                  width: 30%;
+                                  margin: 0 10%;
+                                  background-color: #b1ccf5;
+                                  font-weight: bold;
+                                  font-size: 16px;
+                            
+                                }
+                            
+                                label {
+                                  float: left;
+                                }
+                            
+                                h2 {
+                                  text-align: center;
+                                  margin-top: 0px;
+                                  margin-bottom: 10px;
+                                  font-size: 28px;
+                                }
+                              </style>
+                            </head>
+                            
+                            <body>
+                              <section>
+                                <h2>Atividade - 6 Exibir tabuada.</h2>
+                                <font face=" arial">
+                                  <form name="formnumint" action="#" method="get" onsubmit="return validaProc()">
+                                    <fieldset class="cadinteiro">
+                                      <legend>Entrada de Dados</legend><br>
+                                      <button type="submit1">Enviar</button>
+                                    </fieldset>
+                                  </form>
+                                </font>
+                              </section>
+                              <script>
+                                function validaProc() {
+                                  // Função para validar e processar a entrada de números inteiros
+                                  let somatoria = 0;
+                                  do {
+
+                                    numero = parseInt(prompt("Digite um número inteiro:"));
+                                    console.log("O número digitado é :" + numero);
+                                    somatoria += numero;
+                                    resposta = parseInt(prompt("Para sair digite 0, para continuar digite outro número: "));
+
+                                  } while (resposta != 0);
+
+                                  console.log("A soma dos números digitados é: " + somatoria);
+                                  return false; // Impede o envio do formulário
+                                }
+
+                              </script>
+                            </body>
+                            
+                            </html>
+
+            </textarea>
+
+        <div class="execute-button-container">
+          <input type="button" value="Executar Código"
+            onclick="const newWindow = window.open(); newWindow.document.write(document.codeForm2.fonte.value); newWindow.document.close();" />
+        </div>
+      </form>
+    </section>
+    <section id="codigo-exemplo3" class="card code-container">
+      <h3>Código da Atividade 3 - (<span>While</span>)</h3>
+      <p>Neste código criamos uma estrutra com entrada de dados utilizando o while que mostra a somatória dos números.
+      </p>
+      <br>
+      <form name="codeForm3">
+        <textarea name="fonte" cols="70" rows="25">
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estrutura Repetição para faca</title>
+  <link rel="stylesheet" type="text/css" href="./css/config.css">
+  <style>
+    /*Configurações gerais */
+
+    section {
+
+      margin-top: 0px auto;
+
+    }
+
+    .cadinteiro {
+      width: 300px;
+      margin: 0px auto;
+      font-weight: bold;
+      margin-bottom: 10px;
+
+    }
+
+    .cadinteiro input {
+      margin: 5px auto;
+      width: 100%;
+      padding: 5px 0;
+    }
+
+    .cadinteiro button {
+      width: 30%;
+      margin: 0 10%;
+      background-color: #b1ccf5;
+      font-weight: bold;
+      font-size: 16px;
+
+    }
+
+    label {
+      float: left;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 0px;
+      margin-bottom: 10px;
+      font-size: 28px;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <h2>Atividade 1: Somatória de números. (while)</h2>
+    <font face=" arial">
+      <form name="formnumint" action="#" method="get" onsubmit="return validaProc()">
+        <fieldset class="cadinteiro">
+          <legend>Entrada de Dados</legend><br>
+          <button type="submit1">Enviar</button>
+        </fieldset>
+      </form>
+    </font>
+  </section>
+  <script>
+    function validaProc() {
+
+      let somatoria = 0;
+      let numeros = 1
+
+
+      while (numeros <= 3) {
+        n1 = prompt("Digite o " + numeros + "º número:")
+        console.log("O numero infromado é: " + n1)
+        numeros++
+        somatoria += parseInt(n1)
+
+      }
+
+      console.log("A soma dos números digitados é: " + somatoria);
+      return false;
+    }
+
+  </script>
+</body>
+
+</html>
+                </textarea>
+
+        <div class="execute-button-container">
+          <input type="button" value="Executar Código"
+            onclick="const newWindow = window.open(); newWindow.document.write(document.codeForm3.fonte.value); newWindow.document.close();" />
+        </div>
+      </form>
+    </section>
+    <section id="codigo-exemplo4" class="card code-container">
+      <h3>Código da Atividade 4 - (<span>While</span>)</h3>
+      <p>Neste exemplo criamos um código para ler 3 números inteiros e exibir qual foi o maior numero lido.</p>
+      <br>
+      <form name="codeForm4">
+        <textarea name="fonte" cols="70" rows="25">
+                 <<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura Repetição para faca</title>
+    <link rel="stylesheet" type="text/css" href="./css/config.css">
+    <style>
+       /*Configurações gerais */
+
+section {
+
+    margin-top: 0px auto;
+
+}
+
+.cadinteiro {
+    width: 300px;
+    margin: 0px auto;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+}
+
+.cadinteiro  input{
+    margin: 5px auto;
+    width: 100%;
+    padding: 5px 0;
+}
+
+.cadinteiro  button{
+    width: 30%;
+    margin: 0 10%;
+    background-color: #b1ccf5;
+    font-weight: bold;
+    font-size: 16px;
+
+}
+
+label {
+    float: left;
+}
+
+              h2 {
+                text-align: center;
+                margin-top: 0px;
+                margin-bottom: 10px;
+                font-size: 28px;
+              }
+    </style>
+</head>
+<body>
+    <section>
+        <h2>Atividade - 4 Leia 3 números e mostre o maior lido. (while)</h2>
+        <font face=" arial">
+            <form name="formnumint" action="#" method="get" onsubmit="return validaProc()">
+                <fieldset class="cadinteiro">
+                    <legend>Entrada de Dados</legend><br>
+                    <button type="submit1">Enviar</button>
+                </fieldset>
+            </form>
+        </font>
+    </section>
+    <script>
+      function validaProc() {
+
+        let maiorNum = 0
+        let numeros = 1
+
+
+        while (numeros <= 3) {
+          num = parseInt(prompt("Digite o " + numeros + "º numero:"));
+          console.log("O número lido foi " + num);
+          numeros++
+
+          if (num > maiorNum) {
+            maiorNum = num
+          }
+        }
+
+
+        console.log("O maior número digita é: " + maiorNum);
+        return false;
+      }
+
+    </script>
+</body>
+</html>
+    
+                </textarea>
+
+        <div class="execute-button-container">
+          <input type="button" value="Executar Código"
+            onclick="const newWindow = window.open(); newWindow.document.write(document.codeForm4.fonte.value); newWindow.document.close();" />
+        </div>
+      </form>
+    </section>
+    <section id="codigo-exemplo5" class="card code-container">
+      <h3>Código da Atividade 5 - (<span>Do While</span>)</h3>
+      <p>Este código lê três números inteiros positivos fornecidos pelo usuário e calcula a soma daqueles que são
+        divisíveis por 5. Ao final, exibe o resultado da soma dos números que atendem a essa condição.</p>
+      <br>
+      <form name="codeForm5">
+        <textarea name="fonte" cols="70" rows="25">
+                <!DOCTYPE html>
+                <html lang="pt-BR">
+                
+                <head>
+                  <meta charset="UTF-8">
+                  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                  <title>Estrutura Repetição para faca</title>
+                  <link rel="stylesheet" type="text/css" href="./css/config.css">
+                  <style>
+                    /*Configurações gerais */
+                
+                    section {
+                
+                      margin-top: 0px auto;
+                
+                    }
+                
+                    .cadinteiro {
+                      width: 300px;
+                      margin: 0px auto;
+                      font-weight: bold;
+                      margin-bottom: 10px;
+                
+                    }
+                
+                    .cadinteiro input {
+                      margin: 5px auto;
+                      width: 100%;
+                      padding: 5px 0;
+                    }
+                
+                    .cadinteiro button {
+                      width: 30%;
+                      margin: 0 10%;
+                      background-color: #b1ccf5;
+                      font-weight: bold;
+                      font-size: 16px;
+                
+                    }
+                
+                    label {
+                      float: left;
+                    }
+                
+                    h2 {
+                      text-align: center;
+                      margin-top: 0px;
+                      margin-bottom: 10px;
+                      font-size: 28px;
+                    }
+                  </style>
+                </head>
+                
+                <body>
+                  <section>
+                    <h2>Atividade - 5 Leia 3 números positivos. (while)</h2>
+                    <font face=" arial">
+                      <form name="formnumint" action="#" method="get" onsubmit="return validaProc()">
+                        <fieldset class="cadinteiro">
+                          <legend>Entrada de Dados</legend><br>
+                          <button type="submit1">Enviar</button>
+                        </fieldset>
+                      </form>
+                    </font>
+                  </section>
+                  <script>
+                    function validaProc() {
+
+                      let numeros = 1
+                      soma = 0
+
+                      while (numeros <= 3) {
+
+                        num = parseInt(prompt("Digite o " + numeros + "º numero:"));
+
+                        if (num < 0) {
+
+                          console.log("O número " + num + " não é positivo");
+                          num = parseInt(prompt("Digite o " + numeros + "º numero:"));
+                        }
+                        else {
+
+                          console.log("O número " + num + " é positivo ");
+                          if (num % 5 == 0) {
+
+                            console.log(num + " é divisivel por 5")
+                            soma += num
+                          }
+                          else {
+                            console.log(num + " Não é divisivel por 5")
+                          }
+                        }
+
+                        numeros++
+                      }
+
+                      console.log("A somatoria dos números positivios divisiveis por 5 é " + soma)
+                      return false;
+                    }
+
+
+
+
+                  </script>
+                </body>
+                
+                </html>
+    
+                </textarea>
+
+        <div class="execute-button-container">
+          <input type="button" value="Executar Código"
+            onclick="const newWindow = window.open(); newWindow.document.write(document.codeForm5.fonte.value); newWindow.document.close();" />
+        </div>
+      </form>
+    </section>
+    <section id="codigo-exemplo6" class="card code-container">
+      <h3>Código da Atividade 6 - (<span>Do While</span>)</h3>
+      <p>ste código permite que o usuário digite repetidamente números inteiros. Cada número informado é exibido no
+        console e
+        somado a um total acumulado. O usuário pode encerrar a entrada de números digitando 0. Ao final, o programa
+        exibe no
+        console a soma de todos os números digitados.</p>
+      <br>
+      <form name="codeForm6">
+        <textarea name="fonte" cols="70" rows="25">
+                 <!DOCTYPE html>
+                <html lang="pt-BR">
+                
+                <head>
+                  <meta charset="UTF-8">
+                  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                  <title>Estrutura Repetição para faca</title>
+                
+                  <style>
+                    /*Configurações gerais */
+                
+                    section {
+                
+                      margin-top: 0px auto;
+                
+                    }
+                
+                    .cadinteiro {
+                      width: 300px;
+                      margin: 0px auto;
+                      font-weight: bold;
+                      margin-bottom: 10px;
+                
+                    }
+                
+                    .cadinteiro input {
+                      margin: 5px auto;
+                      width: 100%;
+                      padding: 5px 0;
+                    }
+                
+                    .cadinteiro button {
+                      width: 30%;
+                      margin: 0 10%;
+                      background-color: #b1ccf5;
+                      font-weight: bold;
+                      font-size: 16px;
+                
+                    }
+                
+                    label {
+                      float: left;
+                    }
+                
+                    h2 {
+                      text-align: center;
+                      margin-top: 0px;
+                      margin-bottom: 10px;
+                      font-size: 28px;
+                    }
+                  </style>
+                </head>
+                
+                <body>
+                  <section>
+                    <h2>Atividade - 7 Somatória de números. (do wihle)</h2>
+                    <font face=" arial">
+                      <form name="formnumint" action="#" method="get" onsubmit="return validaProc()">
+                        <fieldset class="cadinteiro">
+                          <legend>Entrada de Dados</legend><br>
+                          <button type="submit1">Enviar</button>
+                        </fieldset>
+                      </form>
+                    </font>
+                  </section>
+                  <script>
+                    function validaProc() {
+                      // Função para validar e processar a entrada de números inteiros
+                      let somatoria = 0;
+                      do {
+
+                        numero = parseInt(prompt("Digite um número inteiro:"));
+                        console.log("O número digitado é :" + numero);
+                        somatoria += numero;
+                        resposta = parseInt(prompt("Para sair digite 0, para continuar digite outro número: "));
+
+                      } while (resposta != 0);
+
+                      console.log("A soma dos números digitados é: " + somatoria);
+                      return false; // Impede o envio do formulário
+                    }
+
+                  </script>
+                </body>
+                
+                </html>
+                </textarea>
+
+        <div class="execute-button-container">
+          <input type="button" value="Executar Código"
+            onclick="const newWindow = window.open(); newWindow.document.write(document.codeForm6.fonte.value); newWindow.document.close();" />
+        </div>
+      </form>
+    </section>
+    <section id="codigo-exemplo7" class="card code-container">
+      <h3>Código da Atividade 7 - (<span>Do While</span>)</h3>
+      <p>Este código lê três números inteiros fornecidos pelo usuário e calcula a soma daqueles que são divisíveis por
+        5. Ao
+        final, exibe o resultado da soma dos números que atendem a essa condição</p>
+      <br>
+      <form name="codeForm7">
+        <textarea name="fonte" cols="70" rows="25">
+          <!DOCTYPE html>
+          <html lang="pt-br">
+          
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Estrutura de repetição para faça</title>
+            <style>
+              /*configuraçoes gerais*/
+              section {
+                margin-top: 0px auto;
+              }
+          
+              /*Configuração do formulario*/
+              .cadnumint {
+                width: 300px;
+                margin: 0px auto;
+                font-weight: bold;
+                margin-bottom: 10px;
+              }
+          
+              .cadnumint input {
+                margin: 5px auto;
+                width: 100%;
+                padding: 5px 0;
+              }
+          
+              .cadnumint button {
+                width: 30%;
+                margin: 0 10%;
+                background-color: #b1ccf5;
+                font-weight: bold;
+                font-size: 16px;
+              }
+          
+              label {
+                float: left
+              }
+          
+                           h2 {
+                text-align: center;
+                margin-top: 0px;
+                margin-bottom: 10px;
+                font-size: 28px;
+              }
+          
+              .cadinteiro {
+                padding: 20px;
+                text-align: center;
+              }
+          
+              .number-input {
+                margin: 10px 0;
+              }
+            </style>
+          </head>
+          
+          <body>
+            <section>
+              <h2>Atividade 5 - Faça um algoritimo que leia 3 números e exiba a soma dos números que são divisíveis por 5. (do while)</h2>
+              <font face="arial">
+                <form name="frmnumint" action="#" method="get" onsubmit="return validaproc()">
+                  <fieldset class="cadinteiro">
+                    <legend>Entrada de dados</legend>
+                    <br>
+          
+                    <div class="cadnumint">
+                      <div class="number-input">
+                        <label for="num1">Número 1:</label>
+                        <input type="number" id="num1" required>
+                      </div>
+          
+                      <div class="number-input">
+                        <label for="num2">Número 2:</label>
+                        <input type="number" id="num2" required>
+                      </div>
+          
+                      <div class="number-input">
+                        <label for="num3">Número 3:</label>
+                        <input type="number" id="num3" required>
+                      </div>
+          
+                      <button type="submit">Enviar</button>
+                    </div>
+                  </fieldset>
+                </form>
+          
+                <div id="resultado" style="text-align: center; margin-top: 20px; font-size: 18px;"></div>
+              </font>
+            </section>
+          
+            <script>
+              function validaproc() {
+                // Obter os três números
+                let numero1 = parseFloat(document.getElementById("num1").value);
+                let numero2 = parseFloat(document.getElementById("num2").value);
+                let numero3 = parseFloat(document.getElementById("num3").value);
+
+                // Verificar se os números são válidos
+                if (isNaN(numero1) || isNaN(numero2) || isNaN(numero3)) {
+                  alert("Por favor, insira números válidos!");
+                  return false;
+                }
+
+                // Array para armazenar números divisíveis por 5
+                let divisiveisPor5 = [];
+
+                // Verificar cada número
+                if (numero1 % 5 === 0) divisiveisPor5.push(numero1);
+                if (numero2 % 5 === 0) divisiveisPor5.push(numero2);
+                if (numero3 % 5 === 0) divisiveisPor5.push(numero3);
+
+                // Calcular a soma
+                let soma = 0;
+                divisiveisPor5.forEach(num => {
+                  soma += num;
+                });
+
+                // Exibir o resultado
+                let resultadoDiv = document.getElementById("resultado");
+
+                if (divisiveisPor5.length > 0) {
+                  resultadoDiv.innerHTML = `
+                              <p>Números divisíveis por 5: ${divisiveisPor5.join(", ")}</p>
+                              <p>Soma dos números divisíveis por 5: ${soma}</p>
+                          `;
+                } else {
+                  resultadoDiv.innerHTML = "<p>Nenhum dos números é divisível por 5.</p>";
+                }
+
+                // Impedir o envio do formulário
+                return false;
+              }
+            </script>
+          </body>
+          
+          </html>
+        </textarea>
+
+        <div class="execute-button-container">
+          <input type="button" value="Executar Código"
+            onclick="const newWindow = window.open(); newWindow.document.write(document.codeForm7.fonte.value); newWindow.document.close();" />
+        </div>
+      </form>
+    </section>
+    <section id="codigo-exemplo8" class="card code-container">
+      <h3>Código da Atividade 8 - (<span>Do While</span>)</h3>
+      <p>Este programa lê a quantidade de alunos de cada uma das três turmas de uma escola e, em seguida, lê as notas de cada
+      aluno. O programa calcula e exibe:
+      O total de alunos em cada turma com média igual ou superior a 7;
+      A média geral da escola considerando todos os alunos.</p>
+      <br>
+      <form name="codeForm8">
+        <textarea name="fonte" cols="70" rows="25">
+                 <!DOCTYPE html>
+                <html lang="pt-BR">
+                
+                <head>
+                  <meta charset="UTF-8">
+                  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                  <title>Estrutura Repetição para faca</title>
+                  <style>
+                    /*Configurações gerais */
+                
+                    section {
+                
+                      margin-top: 0px auto;
+                
+                    }
+                
+                    .cadinteiro {
+                      width: 300px;
+                      margin: 0px auto;
+                      font-weight: bold;
+                      margin-bottom: 10px;
+                
+                    }
+                
+                    .cadinteiro input {
+                      margin: 5px auto;
+                      width: 100%;
+                      padding: 5px 0;
+                    }
+                
+                    .cadinteiro button {
+                      width: 30%;
+                      margin: 0 10%;
+                      background-color: #b1ccf5;
+                      font-weight: bold;
+                      font-size: 16px;
+                
+                    }
+                
+                    label {
+                      float: left;
+                    }
+                
+                    h2 {
+                      text-align: center;
+                      margin-top: 0px;
+                      margin-bottom: 10px;
+                      font-size: 50px;
+                    }
+                  </style>
+                </head>
+                
+                <body>
+                  <section>
+                    <h2>Atividade 8 - Média Notas. (Do while)</h2>
+                    <font face=" arial">
+                      <form name="frmnumint" action="#" method="get" onsubmit="return validaProc()">
+                        <fieldset class="cadinteiro">
+                          <legend>Entrada de Dados</legend><br>
+                          <button type="submit">Enviar</button>
+                        </fieldset>
+                      </form>
+                    </font>
+                  </section>
+                  <script>
+                    function validaProc() {
+                      let turma = 1
+                      let totalAlunosEscola = 0
+                      let somaNotasEscola = 0
+
+                      do {
+                        let somaTurma = 0
+                        let alunosTurma = 0
+                        let aprovadosTurma = 0
+                        let aluno = 1
+
+                        do {
+                          let nota = parseFloat(prompt("Digite a nota do aluno " + aluno + " da turma " + turma + ":"))
+                          somaTurma = somaTurma + nota
+                          alunosTurma = alunosTurma + 1
+
+                          if (nota >= 7) {
+                            aprovadosTurma = aprovadosTurma + 1
+                          }
+
+                          aluno = aluno + 1
+                        } while (aluno <= 3) // 3 alunos por turma
+
+                        let mediaTurma = somaTurma / alunosTurma
+
+                        console.log("Turma " + turma)
+                        console.log("Total de alunos na turma: " + alunosTurma)
+                        console.log("Alunos com média >= 7: " + aprovadosTurma)
+                        console.log("Média da turma: " + mediaTurma)
+                        console.log("---------------------")
+
+                        totalAlunosEscola = totalAlunosEscola + alunosTurma
+                        somaNotasEscola = somaNotasEscola + somaTurma
+
+                        turma = turma + 1
+                      } while (turma <= 3)
+
+                      let mediaGeral = somaNotasEscola / totalAlunosEscola
+                      console.log("Total de alunos na escola: " + totalAlunosEscola)
+                      console.log("Média geral da escola: " + mediaGeral)
+                    }
+
+                  </script>
+                </body>
+                
+                </html>
+    
+        </textarea>
+
+        <div class="execute-button-container">
+          <input type="button" value="Executar Código"
+            onclick="const newWindow = window.open(); newWindow.document.write(document.codeForm8.fonte.value); newWindow.document.close();" />
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer id="contato" class="main-footer">
+    <p>&copy; 2025 Road to Dev - Desenvolvido por Maurício Rosa</p>
+  </footer>
+
+</body>
+
+</html>

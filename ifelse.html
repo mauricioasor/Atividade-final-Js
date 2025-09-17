@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+
+  <script src="https://kit.fontawesome.com/65f22fe718.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="./css/styleatividades.css">
+
+  <title>Road to Dev | Estrutura If Else</title>
+
+</head>
+
+<body>
+
+  <header id="inicio" class="main-header">
+    <nav class="nav-menu">
+      <a class="menu-link" href="index.html"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="titulo-if" class="card">
+      <h1>Estruturas Condicionais: <span>If Else</span></h1>
+      <p style="text-align: center; max-width: 800px; margin: 15px auto 0;">
+        Utilizada para tomadas de decisão. Ela avalia uma condição e, caso seja verdadeira, executa um bloco de código;
+        caso contrário, pode executar outro bloco (else) ou simplesmente seguir em frente.
+      </p>
+      <div id="btn-atividades" class="activity-buttons">
+        <a href="#codigo-exemplo1">Atividade 1</a>
+        <a href="#codigo-exemplo2">Atividade 2</a>
+      </div>
+    </section>
+
+    <section id="codigo-exemplo1" class="card code-container">
+      <h3>Código da atividade 1</h3>
+      <p>O código abaixo é um exemplo completo de cálculo de média usando `if`, `else if` e `else`. Clique em "Executar
+        Código" para vê-lo funcionando em uma nova aba.</p>
+      <br>
+      <form name="codeForm1">
+        <textarea name="fonte" cols="70" rows="25">
+          <!DOCTYPE html>
+          <html lang="pt-br">
+          
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Atividade Estrutura SE JavaScript</title>
+          
+            <style>
+              section {
+                margin-top: 0px auto;
+              }
+          
+              .cadmedialuno1 {
+                width: 300px;
+                margin: 0px auto;
+                font-weight: bold;
+                margin-bottom: 10px;
+              }
+          
+              .cadmedialuno1 input {
+                margin: 5px auto;
+                width: 100%;
+                padding: 5px 0;
+              }
+          
+              .cadmedialuno1 button {
+                width: 30%;
+                margin: 0 10%;
+                background-color: #b1ccf5;
+                font-weight: bold;
+                font-size: 16px;
+                cursor: pointer;
+              }
+          
+              label {
+                float: left;
+              }
+          
+              h2 {
+                text-align: center;
+                margin-top: 0px;
+                margin-bottom: 10px;
+                font-size: 28px;
+              }
+            </style>
+          </head>
+          
+          <body>
+            <section>
+              <h2>Atividade - Calcule média de aluno - Estrutura condicional "se" (if)</h2>
+          
+              <form name="frmnotas" action="#" method="get" onsubmit="return procFormulario()">
+                <fieldset class="cadmedialuno1">
+                  <legend>Entrada de dados</legend>
+                  <br>
+          
+                  <label for="num1">Nota 1:</label>
+                  <input type="text" name="txtnum1" id="num1">
+                  <br><br>
+          
+                  <label for="num2">Nota 2:</label>
+                  <input type="text" name="txtnum2" id="num2">
+                  <br><br>
+          
+                  <label for="num3">Nota 3:</label>
+                  <input type="text" name="txtnum3" id="num3">
+                  <br><br>
+          
+                  <button type="reset">Limpar</button>
+                  <button type="submit">Enviar</button>
+                  <button type="button" onclick="window.location='ifelse.html'">Voltar</button>
+                  
+                </fieldset>
+              </form>
+            </section>
+            <script>
+              function procFormulario() {
+                if (document.frmnotas.txtnum1.value === "") {
+                  alert("Preencha o campo Nota 1");
+                  document.frmnotas.txtnum1.focus();
+                  return false;
+                } else if (document.frmnotas.txtnum2.value === "") {
+                  alert("Preencha o campo Nota 2");
+                  document.frmnotas.txtnum2.focus();
+                  return false;
+                } else if (document.frmnotas.txtnum3.value === "") {
+                  alert("Preencha o campo Nota 3");
+                  document.frmnotas.txtnum3.focus();
+                  return false;
+                } else {
+                  let nota1 = parseFloat(document.frmnotas.txtnum1.value);
+                  let nota2 = parseFloat(document.frmnotas.txtnum2.value);
+                  let nota3 = parseFloat(document.frmnotas.txtnum3.value);
+                  if (isNaN(nota1) || isNaN(nota2) || isNaN(nota3)) {
+                    alert("Por favor, insira apenas números nas notas.");
+                    return false;
+                  }
+
+                  let media = (nota1 + nota2 + nota3) / 3;
+
+                  // Blocos condicionais
+                  if (media >= 7) {
+                    alert("Sua média foi " + media.toFixed(2) + ". Você foi aprovado!");
+                  } else if (media >= 5 && media <= 6.9) {
+                    alert("Sua média foi " + media.toFixed(2) + ". Você está em recuperação!");
+                  } else {
+                    alert("Sua média foi " + media.toFixed(2) + ". Você foi reprovado!");
+                  }
+                }
+                return true;
+              }
+            </script>
+          </body>
+          
+          </html>
+        </textarea>
+
+        <div class="execute-button-container">
+          <input type="button" value="Executar Código"
+            onclick="const newWindow = window.open(); newWindow.document.write(document.codeForm1.fonte.value); newWindow.document.close();" />
+        </div>
+      </form>
+    </section>
+    <section id="codigo-exemplo2" class="card code-container">
+      <h3>Código da atividade 2</h3>
+      <p>O código abaixo verifica quais dos dois números inseridos pelo usuário é maior, utilizando (if)</p>
+      <br>
+      <form name="codeForm">
+        <textarea name="fonte" cols="70" rows="25">
+             <!DOCTYPE html>
+            <html lang="pt-br">
+            
+            <head>
+              <meta charset="UTF-8" />
+              <title>Extrutura de javascript</title>
+              <link rel="stylesheet" type="text/css" href="css/config.css" />
+              <style>
+                /*Configurações gerais*/
+            
+                section {
+                  margin-top: 0px auto;
+            
+                }
+            
+                /*Configurações do cabeçalho*/
+            
+                .cadmediaaluno1 {
+                  width: 300px;
+                  margin: 0px auto;
+                  margin-bottom: 10px;
+                  font-weight: bold;
+                }
+            
+                .cadmediaaluno1 input {
+                  margin: 5px auto;
+                  width: 100%;
+                  padding: 5px 0;
+            
+            
+                }
+            
+                .cadmediaaluno1 button {
+                  width: 30%;
+                  margin: 0 10%;
+                  background-color: #b1ccf5;
+                  font-weight: bold;
+                  font-size: 16px;
+            
+                }
+            
+                label {
+                  float: left;
+            
+                }
+            
+              h2 {
+                text-align: center;
+                margin-top: 0px;
+                margin-bottom: 10px;
+                font-size: 28px;
+              }
+              </style>
+            </head>
+            
+            <body>
+              <section>
+                <h2>Atividade - Ler 2 Números...Estrutura condicional"se"(if)</h2>
+                <font face="arial">
+                  <form name="fmrnotas" action="#" method="get" onsubmit="return procFormulario()">
+                    <fieldset class="cadmediaaluno1">
+                      <legend>Dados pessoais</legend>
+                      <br /><br />
+                      <label for="num1">Nota 1</label>
+                      <input type="text" name="txtnum1" id="num1" />
+                      <br /><br />
+                      <label for="num2">Nota 2</label>
+                      <input type="text" name="txtnum2" id="num2" />
+                      <br /><br />
+                      <button type="reset">Limpar</button>
+                      <button type="submit">Enviar</button>
+                                        <button type="button" onclick="window.location='ifelse.html'">Voltar</button>
+
+                    </fieldset>
+                  </form>
+                </font>
+              </section>
+              <script>
+                function procFormulario() {
+
+                  if (document.fmrnotas.txtnum1.value == "") {
+                    alert("Preencha o campo nota 1");
+                    document.fmrnotas.txtnum1.focus();
+                    return false;
+                  } else if (document.fmrnotas.txtnum2.value == "") {
+                    alert("Preencha o campo nota 2");
+                    document.fmrnotas.txtnum2.focus();
+                    return false;
+                  }
+
+                  const num1 = parseFloat(document.fmrnotas.txtnum1.value);
+                  const num2 = parseFloat(document.fmrnotas.txtnum2.value);
+
+                  if (num1 > num2) {
+                    alert("Nota 1 é maior que nota 2");
+                  } else if (num2 > num1) {
+                    alert("Nota 2 é maior que nota 1");
+                  } else {
+                    alert("As notas são iguais");
+                  }
+
+                  return false;
+                }
+
+              </script>
+            </body>
+            
+            </html>
+
+            </textarea>
+
+        <div class="execute-button-container">
+          <input type="button" value="Executar Código"
+            onclick="const newWindow = window.open(); newWindow.document.write(document.codeForm.fonte.value); newWindow.document.close();" />
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer id="contato" class="main-footer">
+    <p>&copy; 2025 Road to Dev - Desenvolvido por Maurício Rosa</p>
+  </footer>
+
+</body>
+
+</html>
